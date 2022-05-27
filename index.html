@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!---------------------------------- Fonts START----------------------------------->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;500;600;700&family=Satisfy&display=swap"
+    rel="stylesheet">
+  <!---------------------------------- Fonts END ------------------------------------>
+
+  <link rel="stylesheet" href="font/fontello-standart-icons/css/fontello.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!---------------------------------- Colors START --------------------------------->
+  <style>
+    :root {
+      --mainTextColor: #111111;
+      --secondaryTextColor: #fff;
+      --headerBGColor: rgba(109, 101, 101, 0.7);
+
+      --burgerMenuColor: #fff;
+      --linkHover: #ffb727;
+      --heroArrovHover: #ffb727;
+
+      --heroArrowHovered: rgba(255, 255, 255, 0.6);
+
+      --footerSocialHover: #fff;
+      --footerElementsColor: #fff;
+      --footerBGColor: #6d6565;
+    }
+  </style>
+  <!---------------------------------- Colors END ----------------------------------->
+
+  <title>Photographer</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <ul class="header__nav nav">
+            <li class="nav__list">
+              <a href="#s-hero" class="nav__link">Home</a>
+            </li>
+
+            <!--START BLOCK About-->
+            <li class="nav__list">
+              <a href="#s-tour" class="nav__link">About</a>
+            </li>
+            <!-- END BLOCK About-->
+
+            <!--START BLOCK Services-->
+            <li class="nav__list">
+              <a href="#s-information" class="nav__link">Services</a>
+            </li>
+            <!-- END BLOCK Services-->
+
+            <!--START BLOCK Portfolio-->
+            <li class="nav__list">
+              <a href="#s-aboutus" class="nav__link">Portfolio</a>
+            </li>
+            <!-- END BLOCK Portfolio-->
+          </ul>
+          <div class="burger-menu">
+            <nav role='navigation' class="burger-menu__body">
+              <div class="burger-menu__content" id="menuToggle">
+                <input class="burger-menu__checkbox" id="menu_checkbox" type="checkbox" />
+                <label class="burger-menu__lines" for="menu_checkbox">
+                  <div class="burger-menu__line"></div>
+                  <div class="burger-menu__line"></div>
+                  <div class="burger-menu__line"></div>
+                </label>
+                <div id="menu" class="burger-menu__nav burgerMenu-nav"></div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="background: url(img/hero-bg.jpg) no-repeat center /cover rgba(0, 0, 0, 0.5)">
+        <div class="container">
+          <div class="hero__body">
+            <h1 class="hero__title">Laura Thomson</h1>
+            <div class="hero__descr">I'M A PROFESSIONAL PHOTOGRAPHER IN NEW YORK CITY</div>
+            <div class="hero__arrow">
+              <i class="icon-arrow-down-icon"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer--body">
+          <div class="footer--top ft">
+            <div class="ft--left-item fli ft--items">
+              <div class="fli--address">
+                A108 Adam Street
+                NY 535022, USA
+              </div>
+              <div class="fli--phone">
+                <span class="fli--phone-title">Phone:</span>
+                <span class="fli--phone-text fli--text">+1 5589 55488 55</span>
+              </div>
+              <div class="fli--mail">
+                <span class="fli--mail-title ">Email:</span>
+                <span class="fli--mail-text fli--text">info@example.com</span>
+              </div>
+              <div class="fli--social">
+                <a href="#" class="fli--social-item">
+                  <i class="icon-twitter-icon"></i>
+                </a>
+                <a href="#" class="fli--social-item">
+                  <i class="icon-facebook-icon"></i>
+                </a>
+                <a href="#" class="fli--social-item">
+                  <i class="icon-instagram-icon"></i>
+                </a>
+                <a href="#" class="fli--social-item">
+                  <i class="icon-linkedin-icon"></i>
+                </a>
+              </div>
+            </div>
+            <div class="ft--center-item fci ft--items">
+              <ul class="fci--list">
+                <!--START BLOCK Hero-->
+                <a href="#s-hero" class="fci--link">
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span>Home</span>
+                </a>
+                <!-- END BLOCK Hero-->
+
+                <!--START BLOCK About-->
+                <a href="#s-about" class="fci--link">
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span>About</span>
+                </a>
+                <!-- END BLOCK About-->
+
+                <!--START BLOCK Services-->
+                <a href="#s-connect" class="fci--link">
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span>Services</span>
+                </a>
+                <!-- END BLOCK Services-->
+
+                <!--START BLOCK Portfolio-->
+                <a href="#s-team" class="fci--link">
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span>Portfolio</span>
+                </a>
+                <!-- END BLOCK Portfolio-->
+
+                <!--START BLOCK Impressum-->
+                <a href="impressum.html" class="fci--link">
+                  <i class="fa-solid fa-angle-right"></i>
+                  <span>Impressum und Datenschutzerklärung</span>
+                </a>
+                <!-- END BLOCK Impressum-->
+              </ul>
+            </div>
+            <div class="ft--right-item fri ft--items">
+              <h4 class="fri--title">Footer Info</h4>
+              <div class="fri--text">
+                Ihre Website ist so programmiert, dass sie keine Cookies sammelt, deswegen brauchen Sie auch keine
+                weiteren
+                Zustimmungsfenstern für eine Zuslassung der Cookies. Das wird auch in ihrer - Ihre Website ist so
+                programmiert, dass sie keine Cookies sammelt, deswegen brauchen Sie auch keine weiteren
+                Zustimmungsfenstern
+                für eine Zuslassung der Cookies. Das wird auch in ihrer
+              </div>
+            </div>
+          </div>
+          <div class="footer--bottom fb">
+            <div class="fb--text">
+              Deine Webseite - All Rights Reserved
+            </div>
+          </div>
+        </div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

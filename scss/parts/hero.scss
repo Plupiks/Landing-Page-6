@@ -1,0 +1,63 @@
+.hero {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  height: 100vh;
+  background-blend-mode: multiply;
+
+  color: var(--secondaryTextColor);
+
+  // .hero__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  // .hero__title
+
+  &__title {
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.2;
+    text-transform: capitalize;
+
+    margin-bottom: 10px;
+  }
+
+  // .hero__descr
+
+  &__descr {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  // .hero__arrow
+
+  &__arrow {
+    font-size: 28px;
+    color: var(--heroArrowHovered);
+    animation: up-down 1.5s ease-in-out infinite alternate both;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--heroArrovHover);
+    }
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}

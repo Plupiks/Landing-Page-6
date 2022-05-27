@@ -1,0 +1,6 @@
+
+.icon-facebook-icon { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe100;&nbsp;'); }
+.icon-twitter-icon { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe101;&nbsp;'); }
+.icon-linkedin-icon { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe102;&nbsp;'); }
+.icon-instagram-icon { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe103;&nbsp;'); }
+.icon-arrow-down-icon { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe104;&nbsp;'); }

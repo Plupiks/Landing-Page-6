@@ -1,0 +1,180 @@
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.2s linear;
+  background: transparent;
+  padding: 30px 0;
+
+  @media only screen and (max-width: 992px) {
+    padding: 15px 0;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__scrolled {
+    padding: 15px 0;
+    background: var(--headerBGColor);
+  }
+
+  &__scrolled_mobile {
+    background: var(--headerBGColor);
+  }
+}
+
+// -------------------- Header nav --------------------- //
+.nav {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+
+  @media only screen and (max-width: 992px) {
+    width: 90vw;
+  }
+
+  @media only screen and (max-width: 700px) {
+    width: 80vw;
+  }
+
+  @media only screen and (max-width: 700px) {
+    width: 70vw;
+  }
+
+  &__list a {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    @media only screen and (max-width: 992px) {
+      font-size: 14px;
+    }
+
+    color: var(--secondaryTextColor);
+    @media only screen and (max-width: 992px) {
+      color: var(--mainTextColor); // Колір силок у бургер меню
+    }
+
+    text-transform: uppercase;
+    transition: all 0.1s linear;
+    padding: 10px 15px;
+  }
+
+  &__list a:hover {
+    color: var(--linkHover);
+  }
+}
+
+// ----------------------------- BURGER MENU ------------------------------- //
+.burger-menu {
+  display: none;
+  position: relative;
+  z-index: 2;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__lines {
+    display: block;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  &__lines &__line {
+    position: relative;
+    top: 0;
+    height: 6px;
+    background-color: var(--burgerMenuColor);
+    margin-bottom: 6px;
+    transition: 0.3s ease all, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+    border-radius: 5px;
+  }
+
+  &__lines &__line:first-child {
+    transform-origin: 0;
+  }
+
+  &__lines &__line:last-child {
+    margin-bottom: 0;
+  }
+
+  &__lines &__line:nth-child(2) {
+    right: 0;
+    width: 40px;
+  }
+
+  &__checkbox:checked + &__lines &__line:first-child {
+    top: -4px;
+    left: 6px;
+    transform: rotateZ(45deg);
+  }
+
+  &__checkbox:checked + &__lines &__line:last-child {
+    opacity: 0;
+    width: 23px;
+    top: -9px;
+    left: 13px;
+    transform: rotateZ(45deg);
+  }
+
+  &__checkbox:checked + &__lines &__line:nth-child(2) {
+    width: 40px;
+    top: -2px;
+    right: 0px;
+    transform: rotateZ(-45deg);
+  }
+
+  // -------------- Burger menu Content ---------------- //
+  &__nav {
+    display: none;
+
+    position: fixed;
+    z-index: 10;
+    top: 88px;
+    left: 15px;
+
+    width: calc(100vw - 30px);
+    height: calc((100vh - 103px));
+    background: var(--burgerMenuColor);
+    transition: top 0.2s ease-in-out;
+    border-radius: 10px;
+    padding: 30px;
+  }
+}
+
+.show-menu {
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+// ------------------------ Active class on scroll --------------------------------- //
+.active {
+  color: var(--linkHover) !important;
+}
+
+// ========================= Mediaqueries ============================= //
+@media only screen and (min-width: 992px) {
+  .nav {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .burger-menu {
+    display: block;
+  }
+}
