@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // При кліку на кнопку бургер меню
       checkboxInput.addEventListener('click', function () {
         if ($(this).is(':checked')) {
+          burgerMenuBody.style.display = 'block';
           header.classList.add('show-menu'); // Включаеться темний задній фон
           header.classList.remove('header__scrolled'); // Забираю у меню стиль при скролі (тільки коли ми розкрили меню)
         } else {

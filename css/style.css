@@ -167,12 +167,12 @@ main {
     height: 0; }
   100% {
     height: calc(100vh - 69px) !important;
-    display: block; } }
+    display: block !important; } }
 @keyframes slideUp {
   100% {
     height: 0;
     opacity: 0;
-    display: none; }
+    display: none !important; }
   50% {
     opacity: 1; }
   0% {
