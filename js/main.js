@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Вирівнюю контент у секції Hero по центру
     heroContentCentered();
+
+    //Виконую функції (щоб уникнути неполадок зі скріном)
+    forScreenWork();
   });
 
   //Header
@@ -66,11 +69,9 @@ document.addEventListener('DOMContentLoaded', function () {
       // При кліку на кнопку бургер меню
       checkboxInput.addEventListener('click', function () {
         if ($(this).is(':checked')) {
-          burgerMenuBody.style.display = 'block';
           header.classList.add('show-menu'); // Включаеться темний задній фон
           header.classList.remove('header__scrolled'); // Забираю у меню стиль при скролі (тільки коли ми розкрили меню)
         } else {
-          burgerMenuBody.style.display = 'none';
           header.classList.remove('show-menu');
 
           // Стиль для шапки при скролі для мобільних версій (коли меню закрите)
@@ -115,5 +116,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const heroBody = document.querySelector('.hero__body');
 
     heroBody.style.height = `${heroSection.clientHeight - 150}px`;
+  }
+
+  //Виконую функції (щоб уникнути неполадок зі скріном)
+  function forScreenWork() {
+    const heroSection = document.querySelector('.hero');
+
+    if ($(window).width() == 1466) {
+      heroSection.style.height = '922px';
+    } else {
+      heroSection.style.height = '100vh';
+    }
   }
 });

@@ -90,7 +90,7 @@
   &__lines &__line {
     position: relative;
     top: 0;
-    height: 6px;
+    height: 4px;
     background-color: var(--burgerMenuColor);
     margin-bottom: 6px;
     transition: 0.3s ease all, 0.3s ease top, 0.3s ease width, 0.3s ease right;
@@ -111,6 +111,7 @@
   }
 
   &__checkbox:checked + &__lines &__line:first-child {
+    width: 36px;
     top: -4px;
     left: 6px;
     transform: rotateZ(45deg);
@@ -119,13 +120,13 @@
   &__checkbox:checked + &__lines &__line:last-child {
     opacity: 0;
     width: 23px;
-    top: -9px;
-    left: 13px;
+    top: -4px;
+    left: 15px;
     transform: rotateZ(45deg);
   }
 
   &__checkbox:checked + &__lines &__line:nth-child(2) {
-    width: 40px;
+    width: 36px;
     top: -2px;
     right: 0px;
     transform: rotateZ(-45deg);
@@ -133,8 +134,6 @@
 
   // -------------- Burger menu Content ---------------- //
   &__nav {
-    display: none;
-
     position: fixed;
     z-index: 10;
     top: 88px;
@@ -146,6 +145,42 @@
     transition: top 0.2s ease-in-out;
     border-radius: 10px;
     padding: 30px;
+  }
+}
+
+.burger-menu__checkbox:checked ~ .burger-menu__nav {
+  animation: slideDown 0.2s ease-in 1 alternate forwards;
+  animation-delay: -50ms;
+  display: block;
+}
+
+.burger-menu__checkbox:not(:checked) ~ .burger-menu__nav {
+  animation: slideUp 0.2s ease-in 1 alternate forwards;
+  animation-delay: -50ms;
+}
+
+@keyframes slideDown {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(100vh - 69px) !important;
+    display: block;
+  }
+}
+
+@keyframes slideUp {
+  100% {
+    height: 0;
+    opacity: 0;
+    display: none;
+  }
+  50% {
+    opacity: 1;
+  }
+  0% {
+    height: calc(100vh - 69px) !important;
+    opacity: 1;
   }
 }
 

@@ -43,8 +43,8 @@
 
   &__arrow {
     font-size: 28px;
-    color: var(--heroArrowHovered);
-    animation: up-down 1.5s ease-in-out infinite alternate both;
+    color: var(--heroArrowColor);
+    animation: up-down 0.7s ease-in-out infinite alternate both;
     cursor: pointer;
 
     &:hover {
