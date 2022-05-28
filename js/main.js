@@ -129,4 +129,80 @@ document.addEventListener('DOMContentLoaded', function () {
       heroSection.style.height = '100vh';
     }
   }
+
+  //Скрол до першого блоку
+  function scrollToAbout() {
+    const arrow = document.querySelector('.hero__arrow');
+    const aboutSectionBody = document.querySelector('.about');
+
+    arrow.addEventListener('click', function () {
+      // aboutSectionBody.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      $('html,body').animate({ scrollTop: $('.about').offset().top - 65 + 'px' }, 500);
+    });
+  }
+  scrollToAbout();
+
+  //Заповнення прогресбару при скроллі !зробити окремо для кожного елементу
+  function animateProgressOnScroll() {
+    // заповнення прогресбару
+    const progressBodyFill1 = document.querySelector('.progress__bar_fill1');
+    const progressBodyFill2 = document.querySelector('.progress__bar_fill2');
+    const progressBodyFill3 = document.querySelector('.progress__bar_fill3');
+
+    // значення заповнення прогресбару (у відсотках)
+    const progressBodyFillValue1 = +progressBodyFill1.getAttribute('data-percent');
+    const progressBodyFillValue2 = +progressBodyFill2.getAttribute('data-percent');
+    const progressBodyFillValue3 = +progressBodyFill3.getAttribute('data-percent');
+
+    // текст заповнення прогресбару
+    const progressTextValue1 = document.querySelector('.progress__label_value1');
+    const progressTextValue2 = document.querySelector('.progress__label_value2');
+    const progressTextValue3 = document.querySelector('.progress__label_value3');
+
+    // Плавність
+    const easingFn = function (t, b, c, d) {
+      var ts = (t /= d) * t;
+      var tc = ts * t;
+      return b + c * (tc + -3 * ts + 3 * t);
+    };
+
+    // Опції
+    const options = {
+      easingFn,
+      suffix: '%',
+      duration: 1.2,
+      enableScrollSpy: true,
+      scrollSpyOnce: true,
+    };
+
+    // Функція збільшення числа
+    const countUp1 = new CountUp(progressTextValue1, progressBodyFillValue1, options);
+    const countUp2 = new CountUp(progressTextValue2, progressBodyFillValue2, options);
+    const countUp3 = new CountUp(progressTextValue3, progressBodyFillValue3, options);
+
+    // Активую анімацію заповнення при скролі
+    $(window).on('load scroll', function () {
+      let scrollOffset = $(document).scrollTop();
+      let aboutOffset = $('.about').offset().top - 430;
+
+      if (scrollOffset > aboutOffset) {
+        $(progressBodyFill1).animate({ width: progressBodyFillValue1 + '%' }, 1200);
+        $(progressBodyFill2).animate({ width: progressBodyFillValue2 + '%' }, 1200);
+        $(progressBodyFill3).animate({ width: progressBodyFillValue3 + '%' }, 1200);
+
+        countUp1.start();
+        countUp2.start();
+        countUp3.start();
+      }
+    });
+  }
+  animateProgressOnScroll();
+
+  // Галерея фото
+  function photoGallery() {
+    Fancybox.bind('[data-fancybox="gallery-single"]', {
+      // Your options go here
+    });
+  }
+  photoGallery();
 });

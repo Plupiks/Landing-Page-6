@@ -56,6 +56,50 @@ main {
   flex: 1 1 auto;
 }
 
+// Спільні скласи
+.section-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--sectionTitleColor);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+
+  padding-top: 17px;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    content: attr(data-back-text);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #eef0f2;
+    max-width: 400px;
+    width: 100%;
+  }
+}
+.section-descr {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--sectionTextColor);
+  margin-bottom: 30px;
+}
+
 @import 'parts/header';
 @import 'parts/hero';
+@import 'parts/about';
 @import 'parts/footer';

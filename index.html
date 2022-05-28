@@ -12,6 +12,7 @@
     rel="stylesheet">
   <!---------------------------------- Fonts END ------------------------------------>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
   <link rel="stylesheet" href="font/fontello-standart-icons/css/fontello.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -19,6 +20,8 @@
   <style>
     :root {
       --mainTextColor: #111111;
+      --sectionTitleColor: #3b434a;
+      --sectionTextColor: #444444;
       --secondaryTextColor: #fff;
 
       --headerBGColor: rgba(109, 101, 101, 0.9);
@@ -27,6 +30,8 @@
 
       --heroArrowColor: rgba(255, 255, 255, 0.6);
       --heroArrovHover: #ffb727;
+
+      --progressBarBG: #e6e8eb;
 
       --footerSocialHover: #fff;
       --footerElementsColor: #fff;
@@ -84,13 +89,158 @@
     </header>
 
     <main>
-      <section class="hero" style="background: url(img/hero-bg.jpg) no-repeat center /cover rgba(0, 0, 0, 0.5)">
+      <section class="hero" style="background: url(img/hero-bg.jpg) no-repeat fixed center /cover rgba(0, 0, 0, 0.5)">
         <div class="container">
           <div class="hero__body">
             <h1 class="hero__title">Laura Thomson</h1>
             <div class="hero__descr">I'M A PROFESSIONAL PHOTOGRAPHER IN NEW YORK CITY</div>
             <div class="hero__arrow">
               <i class="icon-arrow-down-icon"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <div class="about__body">
+            <h2 class="about__title section-title" data-back-text="ABOUT ME">ABOUT ME</h2>
+            <div class="about__descr section-descr">
+              Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
+            </div>
+            <div class="about__content">
+              <!-- column 1 -->
+              <div class="about__column about__column_1">
+                <div class="about__image" style="background: url(img/about-img.jpg) no-repeat center /100% auto"
+                  data-fancybox="gallery-single" data-src="img/about-img.jpg">
+                </div>
+              </div>
+              <!-- column 1 -->
+
+              <!-- column 2 -->
+              <div class="about__column about__column_2">
+                <!-- row 1 -->
+                <div class="about__row about-row1">
+                  <div class="about-row1__column">
+                    <!-- List 1 -->
+                    <ul class="about-row1__list">
+                      <li class="about-row1__list-item list-item">
+                        <i class="icon-arrow-right-icon"></i>
+                        <span>
+                          <strong>Name:</strong>
+                          Laura Thomso</span>
+                      </li>
+                      <li class="about-row1__list-item list-item">
+                        <i class="icon-arrow-right-icon"></i>
+                        <span>
+                          <strong>Website:</strong>
+                          www.example.com</span>
+                      </li>
+                      <li class="about-row1__list-item list-item">
+                        <i class="icon-arrow-right-icon"></i>
+                        <span>
+                          <strong>Phone:</strong>
+                          +123 456 7890</span>
+                      </li>
+                      <li class="about-row1__list-item list-item">
+                        <i class="icon-arrow-right-icon"></i>
+                        <span>
+                          <strong>City:</strong>
+                          New York, USA</span>
+                      </li>
+                    </ul>
+                    <!-- List 1 -->
+
+                    <!-- List 2 -->
+                    <ul class="about-row1__list">
+                      <li class="about-row1__list-item list-item">
+                        <i class="icon-arrow-right-icon"></i>
+                        <span>
+                          <strong>Age:</strong>
+                          30</span>
+                      </li>
+                      <li class="about-row1__list-item list-item">
+                        <i class="icon-arrow-right-icon"></i>
+                        <span>
+                          <strong>Degree:</strong>
+                          Master</span>
+                      </li>
+                      <li class="about-row1__list-item list-item">
+                        <i class="icon-arrow-right-icon"></i>
+                        <span>
+                          <strong>PhEmailone:</strong>
+                          email@example.com</span>
+                      </li>
+                      <li class="about-row1__list-item list-item">
+                        <i class="icon-arrow-right-icon"></i>
+                        <span>
+                          <strong>Freelance:</strong>
+                          Available</span>
+                      </li>
+                    </ul>
+                    <!-- List 2 -->
+                  </div>
+                </div>
+                <!-- row 1 -->
+
+                <!-- row 2 -->
+                <div class="about__row about-row2">
+                  <!-- Progress 1 -->
+                  <div class="about-row2__row">
+                    <div class="about-row2__progress progress">
+                      <div class="progress__text">
+                        <span class="progress__label progress__label_name">HTML</span>
+                        <span class="progress__label progress__label_value progress__label_value1">100%</span>
+                      </div>
+                      <div class="progress__bar">
+                        <div class="progress__bar_fill progress__bar_fill1" data-percent="20"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Progress 1 -->
+
+                  <!-- Progress 2 -->
+                  <div class="about-row2__row">
+                    <div class="about-row2__progress progress">
+                      <div class="progress__text">
+                        <span class="progress__label progress__label_name">CSS</span>
+                        <span class="progress__label progress__label_value progress__label_value2">90%</span>
+                      </div>
+                      <div class="progress__bar">
+                        <div class="progress__bar_fill progress__bar_fill2" data-percent="50"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Progress 2 -->
+
+                  <!-- Progress 3 -->
+                  <div class="about-row2__row">
+                    <div class="about-row2__progress progress">
+                      <div class="progress__text">
+                        <span class="progress__label progress__label_name">JavaScript</span>
+                        <span class="progress__label progress__label_value progress__label_value3">75%</span>
+                      </div>
+                      <div class="progress__bar">
+                        <div class="progress__bar_fill progress__bar_fill3" data-percent="45"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Progress 3 -->
+                </div>
+                <!-- row 2 -->
+              </div>
+              <!-- column 2 -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <div class="services__body">
+            <h2 class="services__title section-title" data-back-text="MY SERVICES">MY SERVICES</h2>
+            <div class="services__descr section-descr">
+              Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
             </div>
           </div>
         </div>
@@ -188,8 +338,10 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="libs/countUp.js-master/countUp.js"></script>
   <script src="js/main.js"></script>
 </body>
 

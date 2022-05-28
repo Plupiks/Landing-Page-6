@@ -9,7 +9,7 @@
     {
       "uid": "dbe910d26ef49c0d3b6260e3f571d55c",
       "css": "facebook-icon",
-      "code": 57600,
+      "code": 59392,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -23,7 +23,7 @@
     {
       "uid": "a902d3868edd63bc756b4fbf34113f3d",
       "css": "twitter-icon",
-      "code": 57601,
+      "code": 59393,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -37,7 +37,7 @@
     {
       "uid": "39e8cd2ceb2be9b5758b8786b4e3a108",
       "css": "linkedin-icon",
-      "code": 57602,
+      "code": 59394,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -51,7 +51,7 @@
     {
       "uid": "a648a21115e8ee95ea01e0b0680474c4",
       "css": "instagram-icon",
-      "code": 57603,
+      "code": 59395,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -65,7 +65,7 @@
     {
       "uid": "9e780d65152d7a7b50de0a269260c490",
       "css": "arrow-down-icon",
-      "code": 57604,
+      "code": 59396,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -74,6 +74,20 @@
       },
       "search": [
         "arrow-down-icon"
+      ]
+    },
+    {
+      "uid": "698832017a743de46f1c94ce3b8a45cd",
+      "css": "arrow-right-icon",
+      "code": 57605,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M759.4 467.8L304.9 13.3C287.1-4.4 258.3-4.4 240.6 13.3 222.8 31.1 222.8 59.8 240.6 77.6L663 500 240.6 922.4C222.8 940.2 222.8 968.9 240.6 986.7 249.5 995.6 261.1 1000 272.7 1000S296 995.6 304.9 986.7L759.4 532.1C767.9 523.6 772.7 512 772.7 500 772.7 487.9 767.9 476.4 759.4 467.8Z",
+        "width": 1000
+      },
+      "search": [
+        "arrow-right-icon"
       ]
     }
   ]
