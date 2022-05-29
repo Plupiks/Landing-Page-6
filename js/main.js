@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Виконую функції (щоб уникнути неполадок зі скріном)
     forScreenWork();
+
+    // Вирівнюю текст у services по висоті
+    textAlignHeight();
   });
 
   //Header
@@ -171,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
       easingFn,
       suffix: '%',
       duration: 1.2,
-      enableScrollSpy: true,
+      enableScrollSpy: false,
       scrollSpyOnce: true,
     };
 
@@ -184,8 +187,9 @@ document.addEventListener('DOMContentLoaded', function () {
     $(window).on('load scroll', function () {
       let scrollOffset = $(document).scrollTop();
       let aboutOffset = $('.about').offset().top - 430;
+      console.log(scrollOffset);
 
-      if (scrollOffset > aboutOffset) {
+      if (scrollOffset > aboutOffset && scrollOffset < 1497) {
         $(progressBodyFill1).animate({ width: progressBodyFillValue1 + '%' }, 1200);
         $(progressBodyFill2).animate({ width: progressBodyFillValue2 + '%' }, 1200);
         $(progressBodyFill3).animate({ width: progressBodyFillValue3 + '%' }, 1200);
@@ -205,4 +209,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   photoGallery();
+
+  // Вирівнюю текст у services по висоті
+  function textAlignHeight() {
+    // Заголовок
+    const servicesTitles = document.querySelectorAll('.sccb__title');
+    const servicesTitlesHeight = Array.from(servicesTitles).map((e) => e.offsetHeight);
+    const maxHeightTitle = Math.max(...servicesTitlesHeight);
+    for (let i = 0; i < servicesTitles.length; i++) {
+      servicesTitles[i].style.minHeight = maxHeightTitle + 'px';
+    }
+
+    // Текст
+    const servicesText = document.querySelectorAll('.sccb__text');
+    const servicesTextHeight = Array.from(servicesText).map((e) => e.offsetHeight);
+    const maxHeightText = Math.max(...servicesTextHeight);
+    for (let i = 0; i < servicesText.length; i++) {
+      servicesText[i].style.minHeight = maxHeightText + 'px';
+    }
+  }
 });
