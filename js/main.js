@@ -228,5 +228,53 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Фільтр
+  // Добавляю активний клас при кліку
+  function addActiveClass() {
+    let filterItems = document.getElementsByClassName('filter__item');
+    let active = document.getElementsByClassName('filter__item_active');
+    for (i = 0; filterItems.length > i; i++) {
+      filterItems[i].onclick = function () {
+        let currentActive = active[0]; //отримуємо той елемент у якого є активний клас
+
+        //При кліку ми удаляємо активний клас у елемента у якого був активний клас
+        if (currentActive) {
+          currentActive.classList.remove('filter__item_active');
+        }
+
+        // Добавляємо активний клас тому елементу на який нажали якщо у нього немає активного класу
+        if (filterItems[i] !== currentActive) {
+          this.classList.add('filter__item_active');
+        }
+      };
+    }
+  }
+  addActiveClass();
+
+  // Галлерея фото
+  function gallery() {
+    Fancybox.bind('[data-fancybox="gallery-group"]', {
+      dragToClose: false,
+
+      Toolbar: false,
+      closeButton: 'top',
+
+      Image: {
+        zoom: false,
+      },
+
+      on: {
+        initCarousel: (fancybox) => {
+          const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+
+          fancybox.$container.style.setProperty('--bg-image', `url("${slide.$thumb.src}")`);
+        },
+        'Carousel.change': (fancybox, carousel, to, from) => {
+          const slide = carousel.slides[to];
+
+          fancybox.$container.style.setProperty('--bg-image', `url("${slide.$thumb.src}")`);
+        },
+      },
+    });
+  }
+  gallery();
 });

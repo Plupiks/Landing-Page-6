@@ -26,14 +26,15 @@
   &__filter {
     display: flex;
   }
-
-  // .portfolio-body__filter-content
-
-  &__filter-content {
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 1200px;
+  width: 1092px !important;
+}
+
 .filter-block {
   display: flex;
   align-items: center;
@@ -46,7 +47,9 @@
   margin-bottom: 20px;
 
   &__item-body {
-    padding: 10px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   // .filter__item
@@ -76,22 +79,17 @@
 }
 
 .filter-content {
-  // .filter-content__body
-  margin: -12px;
-
-  &__body {
-    padding: 12px;
-    flex: 1 0 33%;
-  }
-
   // .filter-content__item
 
   &__item {
+    margin: 0 auto;
   }
 
   // .filter-content__item-img
 
   &__item-img {
+    padding: 12px;
+    flex: 1 0 33%;
     width: 364px;
     height: 369px;
     object-fit: cover;
