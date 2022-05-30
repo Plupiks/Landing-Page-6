@@ -187,7 +187,6 @@ document.addEventListener('DOMContentLoaded', function () {
     $(window).on('load scroll', function () {
       let scrollOffset = $(document).scrollTop();
       let aboutOffset = $('.about').offset().top - 430;
-      console.log(scrollOffset);
 
       if (scrollOffset > aboutOffset && scrollOffset < 1497) {
         $(progressBodyFill1).animate({ width: progressBodyFillValue1 + '%' }, 1200);
@@ -228,4 +227,6 @@ document.addEventListener('DOMContentLoaded', function () {
       servicesText[i].style.minHeight = maxHeightText + 'px';
     }
   }
+
+  // Фільтр
 });

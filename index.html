@@ -37,6 +37,9 @@
       --servicesIconColor: #ffb727;
       --servicesIconBGColor: #fff4df;
 
+      --filterBorderColor: #ffb727;
+      --filterHoverColor: #ffb727;
+
       --footerSocialHover: #fff;
       --footerElementsColor: #fff;
       --footerBGColor: #6d6565;
@@ -310,6 +313,89 @@
           </div>
         </div>
       </section>
+
+      <section class="portfolio">
+        <div class="container">
+          <div class="portfolio__body portfolio-body">
+            <h2 class="portfolio-body__title section-title" data-back-text="MY PORTFOLIO">MY PORTFOLIO</h2>
+            <div class="portfolio-body__descr section-descr">
+              Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
+            </div>
+            <div class="filter-block">
+              <ul class="portfolio-body__filter filter">
+
+                <!-- Меню фільтру -->
+                <li class="filter__item-body" data-filter="all">
+                  <div class="filter__item filter__item_active">All</div>
+                </li>
+                <li class="filter__item-body" data-filter="1">
+                  <div class="filter__item">App</div>
+                </li>
+                <li class="filter__item-body" data-filter="2">
+                  <div class="filter__item">Card</div>
+                </li>
+                <li class="filter__item-body" data-filter="3">
+                  <div class="filter__item">Web</div>
+                </li>
+              </ul>
+              <ul class="portfolio-body__filter-content filter-content filter-container">
+                <!-- content block1 -->
+                <li class="filter-content__body filtr-item" data-category="1" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content1.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <li class="filter-content__body filtr-item" data-category="1" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content2.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <li class="filter-content__body filtr-item" data-category="1" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content3.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <!-- content block1 -->
+
+                <!-- content block2 -->
+                <li class="filter-content__body filtr-item" data-category="2" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content4.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <li class="filter-content__body filtr-item" data-category="2" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content5.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <li class="filter-content__body filtr-item" data-category="2" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content6.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <!-- content block2 -->
+
+                <!-- content block3 -->
+                <li class="filter-content__body filtr-item" data-category="3" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content7.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <li class="filter-content__body filtr-item" data-category="3" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content8.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <li class="filter-content__body filtr-item" data-category="3" data-sort="value">
+                  <div class="filter-content__item">
+                    <img class="filter-content__item-img" src="img/filter-content9.jpg" alt="portfolio section">
+                  </div>
+                </li>
+                <!-- content block3 -->
+              </ul>
+            </div>
+          </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -407,7 +493,51 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="libs/countUp.js-master/countUp.js"></script>
-  <script src="js/main.js"></script>
+  <script src="libs/filterizr/jquery.filterizr.min.js"></script>
+  <script src=" js/main.js"> </script>
+  <script>
+    const options = {
+      animationDuration: 0.5, // in seconds
+      callbacks: {
+        onFilteringStart: function () {},
+        onFilteringEnd: function () {},
+        onShufflingStart: function () {},
+        onShufflingEnd: function () {},
+        onSortingStart: function () {},
+        onSortingEnd: function () {}
+      },
+      controlsSelector: '', // Selector for custom controls
+      delay: 0, // Transition delay in ms
+      delayMode: 'progressive', // 'progressive' or 'alternate'
+      easing: 'ease-out',
+      filter: 'all', // Initial filter
+      filterOutCss: { // Filtering out animation
+        opacity: 0,
+        transform: 'scale(0.5)'
+      },
+      filterInCss: { // Filtering in animation
+        opacity: 0,
+        transform: 'scale(1)'
+      },
+      gridItemsSelector: '.filtr-item',
+      gutterPixels: 0, // Items spacing in pixels
+      layout: 'sameSize', // See layouts
+      multifilterLogicalOperator: 'or',
+      searchTerm: '',
+      setupControls: true, // Should be false if controlsSelector is set
+      spinner: { // Configuration for built-in spinner
+        enabled: false,
+        fillColor: '#2184D0',
+        styles: {
+          height: '75px',
+          margin: '0 auto',
+          width: '75px',
+          'z-index': 2,
+        },
+      },
+    }
+    const filterizr = new Filterizr('.filter-container', options);
+  </script>
 </body>
 
 </html>

@@ -99,8 +99,13 @@ main {
   margin-bottom: 30px;
 }
 
+.hidden {
+  display: none;
+}
+
 @import 'parts/header';
 @import 'parts/hero';
 @import 'parts/about';
 @import 'parts/services';
+@import 'parts/portfolio';
 @import 'parts/footer';
