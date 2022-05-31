@@ -99,38 +99,13 @@ main {
   margin-bottom: 30px;
 }
 
+//Для того щоб скрити елементи фільтру
 .hidden {
   display: none;
 }
 
-// gallery
-a[data-fancybox] img {
-  cursor: zoom-in;
-}
-
-.fancybox__container {
-  --fancybox-bg: rgba(17, 6, 25, 0.85);
-}
-
-.fancybox__container .fancybox__content {
-  /* Create white border around the image */
-  box-sizing: content-box;
-  padding: 1rem;
-  background: #fff;
-
-  border-radius: 6px;
-  color: #374151;
-  box-shadow: 0 8px 23px rgba(0, 0, 0, 0.5);
-}
-
-.fancybox__caption {
-  max-width: 80%;
-
-  /* Prevent opacity change when dragging up/down */
-  --fancybox-opacity: 1;
-}
-
 @import 'parts/header';
+@import 'parts/fancybox';
 @import 'parts/hero';
 @import 'parts/about';
 @import 'parts/services';

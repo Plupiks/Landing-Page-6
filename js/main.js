@@ -252,14 +252,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Галлерея фото
   function gallery() {
-    Fancybox.bind('[data-fancybox="gallery-group"]', {
+    //Таким чином вибираю тільки не відфільтровані елементи
+    Fancybox.bind('.filtr-item:not(.filteredOut) > img', {
       dragToClose: false,
 
       Toolbar: false,
-      closeButton: 'top',
+      closeButton: 'outside',
 
       Image: {
         zoom: false,
+        click: false,
+        wheel: 'slide',
       },
 
       on: {
