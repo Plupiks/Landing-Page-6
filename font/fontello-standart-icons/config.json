@@ -79,7 +79,7 @@
     {
       "uid": "698832017a743de46f1c94ce3b8a45cd",
       "css": "arrow-right-icon",
-      "code": 57605,
+      "code": 59397,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -88,6 +88,20 @@
       },
       "search": [
         "arrow-right-icon"
+      ]
+    },
+    {
+      "uid": "02f4be842f5454a453081695374f00e8",
+      "css": "arrow-up",
+      "code": 57606,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M500 937.5A31.3 31.3 0 0 0 531.3 906.3V169.2L727.9 365.9A31.3 31.3 0 0 0 772.1 321.6L522.1 71.6A31.3 31.3 0 0 0 477.9 71.6L227.9 321.6A31.3 31.3 0 1 0 272.1 365.9L468.8 169.2V906.3A31.3 31.3 0 0 0 500 937.5Z",
+        "width": 1000
+      },
+      "search": [
+        "arrow-up-icon"
       ]
     }
   ]

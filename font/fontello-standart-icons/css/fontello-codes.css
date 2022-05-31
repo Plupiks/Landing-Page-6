@@ -1,7 +1,8 @@
 
-.icon-arrow-right-icon:before { content: '\e105'; } /* '' */
+.icon-arrow-up:before { content: '\e106'; } /* '' */
 .icon-facebook-icon:before { content: '\e800'; } /* '' */
 .icon-twitter-icon:before { content: '\e801'; } /* '' */
 .icon-linkedin-icon:before { content: '\e802'; } /* '' */
 .icon-instagram-icon:before { content: '\e803'; } /* '' */
 .icon-arrow-down-icon:before { content: '\e804'; } /* '' */
+.icon-arrow-right-icon:before { content: '\e805'; } /* '' */

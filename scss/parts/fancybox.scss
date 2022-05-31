@@ -5,6 +5,7 @@ a[data-fancybox] img {
 
 .fancybox__container {
   --fancybox-bg: rgba(109, 101, 101, 0.9);
+  --carousel-button-svg-filter: drop-shadow(1px, 1px, 1px, rgba(0, 0, 0, 0));
 }
 
 .fancybox__container .fancybox__content {

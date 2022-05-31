@@ -43,13 +43,15 @@
 }
 .filter {
   // .filter__item-body
-  margin: -10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: -5px;
   margin-bottom: 20px;
 
   &__item-body {
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
+    flex: 0 0 auto;
+    padding: 5px;
   }
 
   // .filter__item

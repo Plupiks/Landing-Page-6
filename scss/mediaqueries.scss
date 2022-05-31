@@ -1,0 +1,124 @@
+@media only screen and (max-width: 1100px) {
+  //Services
+  .services-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+  }
+  .services-content__column {
+    flex: 1 0 50%;
+    justify-content: center;
+    padding: 15px;
+  }
+  .services-content__column_body {
+    box-shadow: 0 5px 15px 0 rgba(68, 88, 144, 0.1);
+  }
+
+  // Portfolio
+  .filter-container {
+    width: 972px !important;
+  }
+  .filter-content__item-img {
+    width: 324px;
+    height: 329px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  //About
+  .about__content {
+    flex-wrap: wrap;
+  }
+  .about__column_1 {
+    flex: 1 0 100%;
+  }
+  .about__column_2 {
+    flex: 1 0 100%;
+  }
+  .about__image {
+    min-height: 500px;
+  }
+
+  //Portfolio
+  .filter-container {
+    width: 890px !important;
+  }
+  .filter-content__item {
+    max-width: 445px !important;
+    width: 100% !important;
+  }
+  .filter-content__item-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 884px) {
+  // Portfolio
+  .filter-container {
+    width: 770px !important;
+  }
+  .filter-content__item {
+    max-width: 385px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  // About
+  .about-row1__column {
+    flex-wrap: wrap;
+  }
+  .about-row1__list,
+  .about-row2__list {
+    flex: 1 0 100%;
+  }
+
+  //Services
+  .services-content__column {
+    flex: 1 0 100%;
+  }
+
+  // Portfolio
+  .filter-container {
+    justify-content: center;
+    width: 100% !important;
+  }
+  .filter-content__item {
+    max-width: 100% !important;
+    min-height: 545px !important;
+  }
+  .filter-content__item-img {
+    flex: 1 0 100% !important;
+    max-width: 100%;
+    width: 100%;
+    height: 545px;
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  //Hero
+  .hero__title {
+    font-size: 44px;
+  }
+
+  //Section title
+  .section-title {
+    font-size: 28px;
+    padding-top: 12px;
+
+    &::before {
+      font-size: 38px;
+      top: -9px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  //Portfolio
+  .filter-content__item {
+    min-height: 400px !important;
+  }
+  .filter-content__item-img {
+    height: 400px;
+  }
+}

@@ -10,11 +10,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;500;600;700&family=Satisfy&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="font/fontello/css/fontello.css">
+  <link rel="stylesheet" href="font/fontello-standart-icons/css/fontello.css">
   <!---------------------------------- Fonts END ------------------------------------>
 
+  <link rel="stylesheet" href="libs/aos/aos.css">
   <script src="https://kit.fontawesome.com/1774739131.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-  <link rel="stylesheet" href="font/fontello-standart-icons/css/fontello.css">
   <link rel="stylesheet" href="css/style.css">
 
   <!---------------------------------- Colors START --------------------------------->
@@ -43,6 +45,10 @@
       --footerSocialHover: #fff;
       --footerElementsColor: #fff;
       --footerBGColor: #6d6565;
+
+      --buttonUp: #ffb727;
+      --buttonUpHover: #ffc550;
+      --buttonUpArrow: #fff;
     }
   </style>
   <!---------------------------------- Colors END ----------------------------------->
@@ -111,13 +117,13 @@
       <section class="about">
         <div class="container">
           <div class="about__body">
-            <h2 class="about__title section-title" data-back-text="ABOUT ME">ABOUT ME</h2>
-            <div class="about__descr section-descr">
+            <h2 class="about__title section-title" data-back-text="ABOUT ME" data-aos="fade-left">ABOUT ME</h2>
+            <div class="about__descr section-descr" data-aos="fade-left" data-aos-delay="150">
               Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
             </div>
             <div class="about__content">
               <!-- column 1 -->
-              <div class="about__column about__column_1">
+              <div class="about__column about__column_1" data-aos="zoom-in" data-aos-delay="200">
                 <div class="about__image" style="background: url(img/about-img.jpg) no-repeat center /100% auto"
                   data-fancybox="gallery-single" data-src="img/about-img.jpg">
                 </div>
@@ -130,7 +136,7 @@
                 <div class="about__row about-row1">
                   <div class="about-row1__column">
                     <!-- List 1 -->
-                    <ul class="about-row1__list">
+                    <ul class="about-row1__list" data-aos="fade-left" data-aos-delay="200">
                       <li class="about-row1__list-item list-item">
                         <i class="icon-arrow-right-icon"></i>
                         <span>
@@ -159,7 +165,7 @@
                     <!-- List 1 -->
 
                     <!-- List 2 -->
-                    <ul class="about-row1__list">
+                    <ul class="about-row1__list" data-aos="fade-left" data-aos-delay="400">
                       <li class="about-row1__list-item list-item">
                         <i class="icon-arrow-right-icon"></i>
                         <span>
@@ -245,15 +251,15 @@
       <section class="services">
         <div class="container">
           <div class="services__body">
-            <h2 class="services__title section-title" data-back-text="MY SERVICES">MY SERVICES</h2>
-            <div class="services__descr section-descr">
+            <h2 class="services__title section-title" data-back-text="MY SERVICES" data-aos="fade-left">MY SERVICES</h2>
+            <div class="services__descr section-descr" data-aos="fade-left" data-aos-delay="150">
               Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
             </div>
             <div class="services__content services-content">
               <!-- Column 1 -->
-              <div class="services-content__column">
+              <div class="services-content__column" data-aos="fade-left" data-aos-delay="200">
                 <div class="services-content__column_body sccb">
-                  <div class="sccb__icon">
+                  <div class="sccb__icon" data-aos="zoom-in" data-aos-delay="300">
                     <i class="fa-brands fa-dribbble"></i>
                   </div>
                   <h3 class="sccb__title">Lorem Ipsum</h3>
@@ -266,9 +272,9 @@
               <!-- Column 1 -->
 
               <!-- Column 2 -->
-              <div class="services-content__column">
+              <div class="services-content__column" data-aos="fade-left" data-aos-delay="400">
                 <div class="services-content__column_body sccb">
-                  <div class="sccb__icon">
+                  <div class="sccb__icon" data-aos="zoom-in" data-aos-delay="500">
                     <i class="fa-regular fa-file-lines"></i>
                   </div>
                   <h3 class="sccb__title">Sed ut perspiciatis</h3>
@@ -281,9 +287,9 @@
               <!-- Column 2 -->
 
               <!-- Column 3 -->
-              <div class="services-content__column">
+              <div class="services-content__column" data-aos="fade-left" data-aos-delay="600">
                 <div class="services-content__column_body sccb">
-                  <div class="sccb__icon">
+                  <div class="sccb__icon" data-aos="zoom-in" data-aos-delay="700">
                     <i class="fa-solid fa-gauge-simple-high"></i>
                   </div>
                   <h3 class="sccb__title">Magni Dolores</h3>
@@ -296,9 +302,9 @@
               <!-- Column 3 -->
 
               <!-- Column 4 -->
-              <div class="services-content__column">
+              <div class="services-content__column" data-aos="fade-left" data-aos-delay="800">
                 <div class="services-content__column_body sccb">
-                  <div class="sccb__icon">
+                  <div class="sccb__icon" data-aos="zoom-in" data-aos-delay="900">
                     <i class="fa-solid fa-earth-americas"></i>
                   </div>
                   <h3 class="sccb__title">Nemo Enim</h3>
@@ -317,23 +323,24 @@
       <section class="portfolio">
         <div class="container">
           <div class="portfolio__body portfolio-body">
-            <h2 class="portfolio-body__title section-title" data-back-text="MY PORTFOLIO">MY PORTFOLIO</h2>
-            <div class="portfolio-body__descr section-descr">
+            <h2 class="portfolio-body__title section-title" data-back-text="MY PORTFOLIO" data-aos="fade-left">MY
+              PORTFOLIO</h2>
+            <div class="portfolio-body__descr section-descr" data-aos="fade-left" data-aos-delay="150">
               Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
             </div>
             <ul class="portfolio-body__filter filter">
 
               <!-- Меню фільтру -->
-              <li class="filter__item-body" data-filter="all">
+              <li class="filter__item-body" data-filter="all" data-aos="fade-left" data-aos-delay="250">
                 <div class="filter__item filter__item_active">All</div>
               </li>
-              <li class="filter__item-body" data-filter="1">
+              <li class="filter__item-body" data-filter="1" data-filter="all" data-aos="fade-left" data-aos-delay="350">
                 <div class="filter__item">App</div>
               </li>
-              <li class="filter__item-body" data-filter="2">
+              <li class="filter__item-body" data-filter="2" data-filter="all" data-aos="fade-left" data-aos-delay="450">
                 <div class="filter__item">Card</div>
               </li>
-              <li class="filter__item-body" data-filter="3">
+              <li class="filter__item-body" data-filter="3" data-filter="all" data-aos="fade-left" data-aos-delay="550">
                 <div class="filter__item">Web</div>
               </li>
             </ul>
@@ -341,45 +348,45 @@
               <!-- content block1 -->
               <div class="filter-content__item filtr-item" data-category="1" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content1.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="100">
               </div>
               <div class=" filter-content__item filtr-item" data-category="2" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content2.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="200">
               </div>
               <div class=" filter-content__item filtr-item" data-category="3" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content3.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="300">
               </div>
               <!-- content block1 -->
 
               <!-- content block2 -->
               <div class=" filter-content__item filtr-item" data-category="1" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content4.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="100">
               </div>
               <div class=" filter-content__item filtr-item" data-category="2" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content5.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="200">
               </div>
               <div class=" filter-content__item filtr-item" data-category="3" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content6.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="300">
               </div>
               <!-- content block2 -->
 
               <!-- content block3 -->
               <div class=" filter-content__item filtr-item" data-category="1" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content7.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="100">
               </div>
               <div class=" filter-content__item filtr-item" data-category="2" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content8.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="200">
               </div>
               <div class=" filter-content__item filtr-item" data-category="3" data-sort="value">
                 <img class="filter-content__item-img" src="img/filter-content9.jpg" alt="portfolio section"
-                  data-fancybox="gallery-group">
+                  data-fancybox="gallery-group" data-aos="zoom-in" data-aos-delay="300">
               </div>
               <!-- content block3 -->
             </div>
@@ -424,35 +431,35 @@
               <ul class="fci--list">
                 <!--START BLOCK Hero-->
                 <a href="#s-hero" class="fci--link">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i class="icon-arrow-right-icon"></i>
                   <span>Home</span>
                 </a>
                 <!-- END BLOCK Hero-->
 
                 <!--START BLOCK About-->
                 <a href="#s-about" class="fci--link">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i class="icon-arrow-right-icon"></i>
                   <span>About</span>
                 </a>
                 <!-- END BLOCK About-->
 
                 <!--START BLOCK Services-->
                 <a href="#s-connect" class="fci--link">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i class="icon-arrow-right-icon"></i>
                   <span>Services</span>
                 </a>
                 <!-- END BLOCK Services-->
 
                 <!--START BLOCK Portfolio-->
                 <a href="#s-team" class="fci--link">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i class="icon-arrow-right-icon"></i>
                   <span>Portfolio</span>
                 </a>
                 <!-- END BLOCK Portfolio-->
 
                 <!--START BLOCK Impressum-->
                 <a href="impressum.html" class="fci--link">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i class="icon-arrow-right-icon"></i>
                   <span>Impressum und Datenschutzerklärung</span>
                 </a>
                 <!-- END BLOCK Impressum-->
@@ -479,14 +486,31 @@
           </div>
         </div>
     </footer>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <button class="button-up">
+      <i class="icon-arrow-up"></i>
+    </button>
+  </div>
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Count up -->
   <script src="libs/countUp.js-master/countUp.js"></script>
+
+  <!-- Filter -->
   <script src="libs/filterizr/jquery.filterizr.min.js"></script>
+
+  <!-- Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+  <!-- AOS -->
+  <script src="libs/aos/aos.js"></script>
+
+  <!-- Main js -->
   <script src=" js/main.js"> </script>
+
+  <!-- Fiter Options / AOS Options -->
   <script>
     const options = {
       animationDuration: 0.5,
@@ -499,25 +523,30 @@
         onSortingStart: function () {},
         onSortingEnd: function () {}
       },
-      controlsSelector: '',
-      delay: 0,
+      delay: -20,
       delayMode: 'progressive',
-      easing: 'ease-out',
+      easing: 'ease-in-out',
       filter: 'all',
       filterOutCss: {
         opacity: 0,
         transform: 'scale(0.5)'
       },
       filterInCss: {
-        opacity: 0,
+        opacity: 1,
         transform: 'scale(1)'
       },
-      gridItemsSelector: '.filtr-item',
-      gutterPixels: 0,
       layout: 'sameSize',
-      multifilterLogicalOperator: 'or',
     }
-    const filterizr = new Filterizr('.filter-container');
+    const filterizr = new Filterizr('.filter-container', options);
+
+    AOS.init({
+      // Global settings:
+      disable: 'mobile',
+      once: true,
+      duration: 1000,
+      delay: 100,
+      anchorPlacement: 'top'
+    });
   </script>
 </body>
 

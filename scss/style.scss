@@ -104,6 +104,36 @@ main {
   display: none;
 }
 
+//Button up
+.button-up {
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--buttonUpArrow);
+  position: fixed;
+  z-index: 3;
+  top: 93vh;
+  right: 20px;
+  background: var(--buttonUp);
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: var(--buttonUpHover);
+  }
+}
+
+.button-show {
+  pointer-events: all;
+  opacity: 1;
+}
+
 @import 'parts/header';
 @import 'parts/fancybox';
 @import 'parts/hero';
@@ -111,3 +141,4 @@ main {
 @import 'parts/services';
 @import 'parts/portfolio';
 @import 'parts/footer';
+@import 'mediaqueries';

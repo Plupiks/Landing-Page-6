@@ -127,6 +127,9 @@
 }
 
 // -------------- Links --------------------- //
+.fci--link {
+  align-items: center;
+}
 .fci--link span {
   font-family: 'Raleways', sans-serif;
   font-weight: 600;
@@ -179,4 +182,31 @@
   font-size: 16px;
   line-height: 1.5;
   color: var(--footerElementsColor);
+}
+
+@media only screen and (max-width: 900px) {
+  .footer--top {
+    flex-wrap: wrap;
+  }
+  .ft--items {
+    flex: 1 0 50%;
+
+    &:first-child {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  .ft--items {
+    flex: 1 0 100%;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
 }

@@ -11,7 +11,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Вирівнюю текст у services по висоті
     textAlignHeight();
+
+    //ButtonUp
+    buttonUpShow();
   });
+
+  //ButtonUp
+  function buttonUpShow() {
+    const buttonUp = document.querySelector('.button-up');
+    const offsetTop = scrollY;
+    if (offsetTop >= 480) {
+      buttonUp.classList.add('button-show');
+    } else {
+      buttonUp.classList.remove('button-show');
+    }
+  }
+
+  function buttonUpFunc() {
+    const buttonUp = document.querySelector('.button-up');
+    buttonUp.addEventListener('click', function () {
+      $('html,body').animate({ scrollTop: $('.hero').offset().top + 'px' }, 500);
+    });
+  }
+  buttonUpFunc();
 
   //Header
   function header() {
@@ -20,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const headerBody = document.querySelector('.header__body');
       const headerNavHeight = document.querySelector('.header__nav').clientHeight;
 
-      if (window.matchMedia('(min-width:992px)').matches) {
+      if (window.matchMedia('(min-width:993px)').matches) {
         headerBody.style.height = `${headerNavHeight}px`;
       }
     }
@@ -73,11 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
       checkboxInput.addEventListener('click', function () {
         if ($(this).is(':checked')) {
           burgerMenuBody.style.display = 'block';
+          burgerMenuBody.style.pointerEvents = 'all';
           header.classList.add('show-menu'); // Включаеться темний задній фон
           header.classList.remove('header__scrolled'); // Забираю у меню стиль при скролі (тільки коли ми розкрили меню)
         } else {
           header.classList.remove('show-menu');
-
+          burgerMenuBody.style.pointerEvents = 'none';
           // Стиль для шапки при скролі для мобільних версій (коли меню закрите)
           if (scrollTop > headerHeight) {
             header.classList.add('header__scrolled');
@@ -118,6 +141,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function heroContentCentered() {
     const heroSection = document.querySelector('.hero');
     const heroBody = document.querySelector('.hero__body');
+
+    if (window.matchMedia('(min-width:1024px)').matches) {
+      heroSection.style = 'background: url(img/hero-bg.jpg) no-repeat fixed center /cover rgba(0, 0, 0, 0.5)';
+    } else {
+      heroSection.style = 'background: url(img/hero-bg.jpg) no-repeat center /cover rgba(0, 0, 0, 0.5)';
+    }
 
     heroBody.style.height = `${heroSection.clientHeight - 150}px`;
   }
@@ -201,14 +230,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   animateProgressOnScroll();
 
-  // Галерея фото
-  function photoGallery() {
-    Fancybox.bind('[data-fancybox="gallery-single"]', {
-      // Your options go here
-    });
-  }
-  photoGallery();
-
   // Вирівнюю текст у services по висоті
   function textAlignHeight() {
     // Заголовок
@@ -276,6 +297,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
           fancybox.$container.style.setProperty('--bg-image', `url("${slide.$thumb.src}")`);
         },
+      },
+    });
+
+    Fancybox.bind('.about__image', {
+      dragToClose: false,
+
+      Toolbar: false,
+      closeButton: 'outside',
+
+      Image: {
+        zoom: false,
+        click: false,
+        wheel: 'slide',
       },
     });
   }
