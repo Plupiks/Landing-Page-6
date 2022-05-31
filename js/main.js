@@ -88,12 +88,26 @@ document.addEventListener('DOMContentLoaded', function () {
       const burgerMenuBody = document.querySelector('.burgerMenu-nav');
       const checkboxInput = document.getElementById('menu_checkbox');
       const header = document.querySelector('.header');
+      const link = document.querySelectorAll('.nav__list');
       const scrollTop = scrollY;
       const headerHeight = header.clientHeight;
 
       // При кліку на кнопку бургер меню
       checkboxInput.addEventListener('click', function () {
         if ($(this).is(':checked')) {
+          // Клік по силці коли меню відкрите
+          $(link).on('click', function () {
+            header.classList.remove('show-menu');
+            burgerMenuBody.style.display = 'none';
+            burgerMenuBody.style.pointerEvents = 'none';
+            $(checkboxInput).prop('checked', false);
+            if (scrollTop > headerHeight) {
+              header.classList.add('header__scrolled');
+            } else {
+              header.classList.remove('header__scrolled');
+            }
+          });
+
           burgerMenuBody.style.display = 'block';
           burgerMenuBody.style.pointerEvents = 'all';
           header.classList.add('show-menu'); // Включаеться темний задній фон
@@ -136,6 +150,21 @@ document.addEventListener('DOMContentLoaded', function () {
     moveNavToBurger();
     showBurgerMenu();
   }
+
+  // Скрол до секції по кліку на силки в меню
+  function scrollToSection() {
+    const anchors = document.querySelectorAll('a[href^="#s-"]');
+
+    for (let anchor of anchors) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const blockID = anchor.getAttribute('href'); // Отримую силки з назвами блоків до яких буду скролити
+
+        $('html,body').animate({ scrollTop: $('' + blockID).offset().top - 40 + 'px' }, 500);
+      });
+    }
+  }
+  scrollToSection();
 
   //Вирівнюю контент у секції Hero по центру
   function heroContentCentered() {
