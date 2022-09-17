@@ -1,6 +1,6 @@
 # Landing Page (for Photographer)
 
-![](https://github.com/Plupiks/Landing-Page-Company-3/blob/da5595358cd2c3541184faefa91b59eb59c38ae6/img/corpat.jpg)
+![](https://github.com/Plupiks/Landing-Page-6/blob/a7e14353f3f13ae95b396004563fcb0771ba9461/img/photographer.jpg)
 
 ## About:
 The following elements are present in this website:
